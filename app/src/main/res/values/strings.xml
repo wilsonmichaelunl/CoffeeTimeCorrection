@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Coffee Time</string>
+    <string name="button_name">Get Coffee Time</string>
+    <string name="instruction">Enter your times in 24 hour HH:MM format</string>
+    <string name="maker_time">Enter in the time displayed on your coffee maker</string>
+    <string name="desired_time">Enter in the time you want your coffee made</string>
+</resources>
