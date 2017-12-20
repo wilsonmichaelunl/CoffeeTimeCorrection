@@ -4,4 +4,6 @@
     <string name="instruction">Enter your times in 24 hour HH:MM format</string>
     <string name="maker_time">Enter in the time displayed on your coffee maker</string>
     <string name="desired_time">Enter in the time you want your coffee made</string>
+    <string name="hint">HH:MM</string>
+    <string name="buttonText">Get Coffee Time</string>
 </resources>
