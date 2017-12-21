@@ -60,7 +60,17 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="16dp"
-        android:text="@string/instruction" />
+        android:text="@string/instruction"/>
+
+    <TextView
+        android:id="@+id/final_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:gravity="center"
+        android:textSize="26sp"/>
 
 </LinearLayout>
 

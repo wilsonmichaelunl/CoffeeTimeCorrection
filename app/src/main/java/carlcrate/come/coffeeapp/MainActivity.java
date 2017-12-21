@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        display = (TextView) findViewById(R.id.instruction);
+        display = (TextView) findViewById(R.id.final_time);
         if(savedInstanceState != null){
             CharSequence savedText = savedInstanceState.getCharSequence(KEY_TEXT_VALUE);
             display.setText(savedText);
@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
 
     public void onClickFindTime(View view) throws ParseException, InvocationTargetException {
         //Get a reference to the TextView
-        display = (TextView) findViewById(R.id.instruction);
+        display = (TextView) findViewById(R.id.final_time);
         //Get a reference to the first EditText
         EditText desiredTime = (EditText) findViewById(R.id.desired_time);
         //Get a reference to the second EditText
