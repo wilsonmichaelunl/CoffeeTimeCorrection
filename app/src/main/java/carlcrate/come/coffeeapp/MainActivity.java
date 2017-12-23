@@ -12,7 +12,7 @@ import java.text.ParseException;
 public class MainActivity extends Activity {
     private TimeCalc newTime = new TimeCalc();
     private TextView display;
-    private static final String KEY_TEXT_VALUE = "textValue";
+    private String timeToShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,15 +20,14 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         display = (TextView) findViewById(R.id.final_time);
         if(savedInstanceState != null){
-            CharSequence savedText = savedInstanceState.getCharSequence(KEY_TEXT_VALUE);
-            display.setText(savedText);
+            timeToShow = savedInstanceState.getString("timeToShow");
+            display.setText(timeToShow);
         }
     }
 
     @Override
-    protected void onSaveInstanceState (Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putCharSequence(KEY_TEXT_VALUE, display.getText());
+    protected void onSaveInstanceState (Bundle savedInstanceState) {
+        savedInstanceState.putString("timeToShow", timeToShow);
     }
 
     public void onClickFindTime(View view) throws ParseException, InvocationTargetException {
@@ -43,7 +42,7 @@ public class MainActivity extends Activity {
         //Get the time on the coffee maker from the input
         String machineTime = String.valueOf(timeOnMaker.getText());
         //Get time from the TimeCalc Class
-        String timeToShow = newTime.getTime(brewTime, machineTime);
+        timeToShow = newTime.getTime(brewTime, machineTime);
         //Display the selected item
         display.setText(timeToShow);
     }
